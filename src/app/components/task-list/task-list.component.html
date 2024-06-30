@@ -1,0 +1,11 @@
+<div *ngIf="tasks$ | async as tasks; else loading">
+    <div *ngIf="tasks.length === 0">
+      <p>No tasks found.</p>
+    </div>
+    
+  </div>
+  
+  <ng-template #loading>
+    <p>Loading tasks...</p>
+  </ng-template>
+  

@@ -1,0 +1,11 @@
+<div>
+  <h3>{{ task.title }}</h3>
+  <p>{{ task.description }}</p>
+  <p>Due Date: {{ task.dueDate | date }}</p>
+  <p>Priority: {{ task.priority }}</p>
+  <p>Status: {{ task.status }}</p>
+  <button (click)="onUpdateStatus('in-progress')">In Progress</button>
+  <button (click)="onUpdateStatus('completed')">Completed</button>
+  <button (click)="onEdit()">Edit</button>
+  <button (click)="onDelete()">Delete</button>
+</div>

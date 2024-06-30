@@ -1,0 +1,11 @@
+<form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+  <input formControlName="title" placeholder="Title" required>
+  <textarea formControlName="description" placeholder="Description"></textarea>
+  <input formControlName="dueDate" type="date" required>
+  <select formControlName="priority">
+    <option value="low">Low</option>
+    <option value="medium">Medium</option>
+    <option value="high">High</option>
+  </select>
+  <button type="submit">Add Task</button>
+</form>
